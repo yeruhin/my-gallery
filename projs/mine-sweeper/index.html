@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mine Sweeper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/Minesweeper_XP.png">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+
+<body onload="initGame({ value: 'Easy' })">
+    <div class="difficulty text">
+        <p>Please choose your difficulty level</p>
+        <input type="radio" name="difficulty" value="Easy" onclick="radioClick(this)">Easy
+        <input type="radio" name="difficulty" value="Medium" onclick="radioClick(this)">Medium
+        <input type="radio" name="difficulty" value="Hard" onclick="radioClick(this)">Hard
+    </div>
+    <div>
+
+
+            <div class="game-toolbar">
+                <div class="timer toolbar">0:0</div>
+                <img src="img/facesmile.gif" onmousedown="src = 'img/faceooh.gif'" onmouseup="resetGame()" class="smily-btn toolbar">
+                <div class="flag-down-counter toolbar">0</div>
+            </div>
+            
+        
+            <table class="table">
+            </table>
+
+        <div class="text">
+            <h2>Easy level best score - <span class="Easy"></span></h2>
+            <h2>Medium level best score - <span class="Medium"></span></h2>
+            <h2>Hard level best score - <span class="Hard"></span></h2>
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+
+</html>
